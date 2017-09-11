@@ -52,7 +52,7 @@ namespace LeetCodeExamples
 
             for(int i = 0; i < nums.Length; i++)
                 for (int j = 1; j < nums.Length; j++)
-                    if(i != j)
+                    if(nums[i] + nums[j] == target)
                         return new[] { i, j };
 
             return null;
