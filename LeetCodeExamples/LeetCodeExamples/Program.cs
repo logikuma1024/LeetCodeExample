@@ -36,7 +36,7 @@ namespace LeetCodeExamples
             ///Given nums = [2, 7, 11, 15], target = 9
             ///return [0, 1]
 
-            return new[] { Array.IndexOf(nums, xxx), Array.IndexOf(nums, target - xxx) };
+            //return new[] { Array.IndexOf(nums, xxx), Array.IndexOf(nums, target - xxx) };
 
             //return nums.SelectMany((x, i) =>
             //            nums.Select((y, j) =>
@@ -50,13 +50,12 @@ namespace LeetCodeExamples
             //            })
             //        ).First(x => x != null);
 
-            //for(int i = 0; i < nums.Length; i++)
-            //    for (int j = 0; j < nums.Length; j++)
-            //        if(i != j)
-            //            if(nums[i] + nums[j] == target)
-            //                return new[] { i, j };
+            for(int i = 0; i < nums.Length; i++)
+                for (int j = 1; j < nums.Length; j++)
+                    if(i != j)
+                        return new[] { i, j };
 
-            //return null;
+            return null;
         }
     }
 }
